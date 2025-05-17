@@ -7,7 +7,12 @@ const app = express();
 const port = 3001;
 
 // Middleware
-app.use(cors());
+// Replace your current CORS middleware with this:
+app.use(cors({
+  origin: '*', // For development only - restrict this in production
+  methods: ['POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}));
 app.use(express.json());
 
 // Load environment variables

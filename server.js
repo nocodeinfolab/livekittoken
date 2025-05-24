@@ -9,7 +9,7 @@ const port = 3001;
 // Middleware
 // Replace your current CORS middleware with this:
 app.use(cors({
-  origin: '*', // For development only - restrict this in production
+  origin: 'https://nocodeinfolab.github.io/', // For development only - restrict this in production
   methods: ['POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type']
 }));
